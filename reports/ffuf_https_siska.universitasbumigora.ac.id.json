@@ -1,0 +1,270 @@
+{
+    "commandline": "ffuf -u https://siska.universitasbumigora.ac.id/FUZZ -w wordlists/common-dirs.txt -of json -o reports/ffuf_https_siska.universitasbumigora.ac.id.json",
+    "time": "2025-08-09T18:05:51+08:00",
+    "results": [
+        {
+            "input": {
+                "FFUFHASH": "2fdcba",
+                "FUZZ": "assets"
+            },
+            "position": 10,
+            "status": 301,
+            "length": 255,
+            "words": 14,
+            "lines": 8,
+            "content-type": "text/html; charset=iso-8859-1",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/assets/",
+            "scraper": {},
+            "duration": 58882700,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/assets",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb27",
+                "FUZZ": "download"
+            },
+            "position": 39,
+            "status": 301,
+            "length": 257,
+            "words": 14,
+            "lines": 8,
+            "content-type": "text/html; charset=iso-8859-1",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/download/",
+            "scraper": {},
+            "duration": 65126900,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/download",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcbb",
+                "FUZZ": "backup"
+            },
+            "position": 11,
+            "status": 301,
+            "length": 255,
+            "words": 14,
+            "lines": 8,
+            "content-type": "text/html; charset=iso-8859-1",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/backup/",
+            "scraper": {},
+            "duration": 70572500,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/backup",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb2",
+                "FUZZ": "login"
+            },
+            "position": 2,
+            "status": 200,
+            "length": 7243,
+            "words": 1910,
+            "lines": 142,
+            "content-type": "text/html; charset=UTF-8",
+            "redirectlocation": "",
+            "scraper": {},
+            "duration": 701306100,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/login",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb1",
+                "FUZZ": "admin"
+            },
+            "position": 1,
+            "status": 200,
+            "length": 3311,
+            "words": 716,
+            "lines": 52,
+            "content-type": "text/html; charset=UTF-8",
+            "redirectlocation": "",
+            "scraper": {},
+            "duration": 799141500,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/admin",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb33",
+                "FUZZ": "home"
+            },
+            "position": 51,
+            "status": 307,
+            "length": 0,
+            "words": 1,
+            "lines": 1,
+            "content-type": "text/html; charset=UTF-8",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/login",
+            "scraper": {},
+            "duration": 545482000,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/home",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb37",
+                "FUZZ": "error"
+            },
+            "position": 55,
+            "status": 200,
+            "length": 7999,
+            "words": 1081,
+            "lines": 162,
+            "content-type": "text/html; charset=UTF-8",
+            "redirectlocation": "",
+            "scraper": {},
+            "duration": 748442300,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/error",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb4b",
+                "FUZZ": "auth"
+            },
+            "position": 75,
+            "status": 200,
+            "length": 0,
+            "words": 1,
+            "lines": 1,
+            "content-type": "text/html; charset=UTF-8",
+            "redirectlocation": "",
+            "scraper": {},
+            "duration": 735587600,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/auth",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb8b",
+                "FUZZ": "backup"
+            },
+            "position": 139,
+            "status": 301,
+            "length": 255,
+            "words": 14,
+            "lines": 8,
+            "content-type": "text/html; charset=iso-8859-1",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/backup/",
+            "scraper": {},
+            "duration": 32991800,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/backup",
+            "host": "siska.universitasbumigora.ac.id"
+        },
+        {
+            "input": {
+                "FFUFHASH": "2fdcb95",
+                "FUZZ": "application"
+            },
+            "position": 149,
+            "status": 301,
+            "length": 260,
+            "words": 14,
+            "lines": 8,
+            "content-type": "text/html; charset=iso-8859-1",
+            "redirectlocation": "https://siska.universitasbumigora.ac.id/application/",
+            "scraper": {},
+            "duration": 51128700,
+            "resultfile": "",
+            "url": "https://siska.universitasbumigora.ac.id/application",
+            "host": "siska.universitasbumigora.ac.id"
+        }
+    ],
+    "config": {
+        "autocalibration": false,
+        "autocalibration_keyword": "FUZZ",
+        "autocalibration_perhost": false,
+        "autocalibration_strategies": [
+            "basic"
+        ],
+        "autocalibration_strings": [],
+        "colors": false,
+        "cmdline": "ffuf -u https://siska.universitasbumigora.ac.id/FUZZ -w wordlists/common-dirs.txt -of json -o reports/ffuf_https_siska.universitasbumigora.ac.id.json",
+        "configfile": "",
+        "postdata": "",
+        "debuglog": "",
+        "delay": {
+            "value": "0.00"
+        },
+        "dirsearch_compatibility": false,
+        "encoders": [],
+        "extensions": [],
+        "fmode": "or",
+        "follow_redirects": false,
+        "headers": {},
+        "ignorebody": false,
+        "ignore_wordlist_comments": false,
+        "inputmode": "clusterbomb",
+        "cmd_inputnum": 100,
+        "inputproviders": [
+            {
+                "name": "wordlist",
+                "keyword": "FUZZ",
+                "value": "D:\\Kuliah\\SKRIPSI\\blackbox-attack\\wordlists\\common-dirs.txt",
+                "encoders": "",
+                "template": ""
+            }
+        ],
+        "inputshell": "",
+        "json": false,
+        "matchers": {
+            "IsCalibrated": false,
+            "Mutex": {},
+            "Matchers": {
+                "status": {
+                    "value": "200-299,301,302,307,401,403,405,500"
+                }
+            },
+            "Filters": {},
+            "PerDomainFilters": {}
+        },
+        "mmode": "or",
+        "maxtime": 0,
+        "maxtime_job": 0,
+        "method": "GET",
+        "noninteractive": false,
+        "outputdirectory": "",
+        "outputfile": "reports/ffuf_https_siska.universitasbumigora.ac.id.json",
+        "outputformat": "json",
+        "OutputSkipEmptyFile": false,
+        "proxyurl": "",
+        "quiet": false,
+        "rate": 0,
+        "raw": false,
+        "recursion": false,
+        "recursion_depth": 0,
+        "recursion_strategy": "default",
+        "replayproxyurl": "",
+        "requestfile": "",
+        "requestproto": "https",
+        "scraperfile": "",
+        "scrapers": "all",
+        "sni": "",
+        "stop_403": false,
+        "stop_all": false,
+        "stop_errors": false,
+        "threads": 40,
+        "timeout": 10,
+        "url": "https://siska.universitasbumigora.ac.id/FUZZ",
+        "verbose": false,
+        "wordlists": [
+            "D:\\Kuliah\\SKRIPSI\\blackbox-attack\\wordlists\\common-dirs.txt"
+        ],
+        "http2": false,
+        "client-cert": "",
+        "client-key": ""
+    }
+}

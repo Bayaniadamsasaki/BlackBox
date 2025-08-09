@@ -1,0 +1,21 @@
+[waf-detect:nginxgeneric] [http] [info] http://testphp.vulnweb.com/
+[clientaccesspolicy] [http] [info] http://testphp.vulnweb.com/clientaccesspolicy.xml
+[nginx-version] [http] [info] http://testphp.vulnweb.com/ ["nginx/1.19.0"]
+[php-detect] [http] [info] http://testphp.vulnweb.com/ ["5.6.40"]
+[idea-folder-exposure] [http] [info] http://testphp.vulnweb.com/.idea/workspace.xml
+[tech-detect:dreamweaver] [http] [info] http://testphp.vulnweb.com/
+[tech-detect:nginx] [http] [info] http://testphp.vulnweb.com/
+[tech-detect:php] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:strict-transport-security] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:content-security-policy] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:x-content-type-options] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:referrer-policy] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:permissions-policy] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:x-frame-options] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:clear-site-data] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://testphp.vulnweb.com/
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://testphp.vulnweb.com/
+[txt-fingerprint] [dns] [info] testphp.vulnweb.com [""google-site-verification:toEctYsulNIxgraKk7H3z58PCyz2IOCc36pIupEPmYQ""]
+[caa-fingerprint] [dns] [info] testphp.vulnweb.com
