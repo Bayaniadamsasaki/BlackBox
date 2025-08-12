@@ -11,6 +11,7 @@ from plugins.crawl_katana import Katana
 from plugins.crawl_simple import SimpleCrawler
 from plugins.fuzz_ffuf import FFUF
 from plugins.scan_nuclei import Nuclei
+from plugins.scan_nmap import Nmap
 
 console = Console()
 
@@ -21,7 +22,7 @@ if os.path.isdir(BIN_DIR):
     os.environ["PATH"] = BIN_DIR + os.pathsep + os.environ.get("PATH", "")
 
 PLUGINS = [
-    Subfinder(), Katana(), SimpleCrawler(), FFUF(), Nuclei()
+    Subfinder(), Katana(), SimpleCrawler(), FFUF(), Nuclei(), Nmap()
 ]
 
 def banner():
@@ -62,7 +63,8 @@ def menu():
         console.print("[bold]3[/bold]) Crawler (Katana)")
         console.print("[bold]4[/bold]) Fuzzer (FFUF)")
         console.print("[bold]5[/bold]) Vulnerability Scan (Nuclei)")
-        console.print("[bold]6[/bold]) Pipeline Cepat (Katana ➜ Nuclei)")
+        console.print("[bold]6[/bold]) Network Scan (Nmap)")
+        console.print("[bold]7[/bold]) Pipeline Cepat (Katana ➜ Nuclei)")
         console.print("[bold]0[/bold]) Keluar\n")
         choice = input("Pilih opsi: ").strip()
 
@@ -166,6 +168,42 @@ def menu():
             pause()
 
         elif choice == "6":
+            console.print("[dim]Nmap scan types:[/dim]")
+            console.print("  - [cyan]basic[/cyan]: TCP SYN scan + OS detection + service version")
+            console.print("  - [cyan]fast[/cyan]: Fast scan (top 100 ports)")
+            console.print("  - [cyan]comprehensive[/cyan]: Full scan with vulnerability scripts")
+            console.print("  - [cyan]stealth[/cyan]: Stealth scan (slow, fragmented)")
+            console.print("  - [cyan]custom[/cyan]: Custom scan with specific ports")
+            
+            console.print("[dim]Contoh target:[/dim]")
+            console.print("  - [cyan]testphp.vulnweb.com[/cyan] (domain/hostname)")
+            console.print("  - [cyan]192.168.1.1[/cyan] (IP address)")
+            console.print("  - [cyan]192.168.1.0/24[/cyan] (network range)")
+            
+            target = input("Target (IP/domain/network, tanpa http://): ").strip()
+            scan_type = input("Scan type [basic/fast/comprehensive/stealth/custom] (default basic): ").strip() or "basic"
+            
+            ports = None
+            if scan_type == "custom":
+                ports = input("Port range (contoh: 80,443,8080 atau 1-1000): ").strip()
+            
+            extra = input("Tambahan flag nmap (opsional): ").strip()
+            
+            nmap = Nmap()
+            if nmap.is_available():
+                out = nmap.run(target, scan_type=scan_type, ports=ports, extra=extra)
+                console.print(f"[green]Output:[/green] {out}")
+                
+                # Show scan results preview
+                if os.path.isfile(out) and os.path.getsize(out) > 0:
+                    console.print(f"[blue]Nmap scan selesai, hasil tersimpan[/blue]")
+                else:
+                    console.print("[yellow]Scan gagal atau tidak ada hasil[/yellow]")
+            else:
+                console.print("[red]Nmap tidak tersedia![/red]")
+            pause()
+
+        elif choice == "7":
             url = input("URL target untuk crawl lalu scan (https://example.com): ").strip()
             
             # 1) Crawl - Use available crawler
